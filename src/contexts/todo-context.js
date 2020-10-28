@@ -36,23 +36,11 @@ const reducer = (state, action) => {
 export const TodoContextProvider = (props) => {
   const [state, dispatch] = useReducer(reducer, initState);
   return (
-    <TodoContext.Provider value={[state, dispatch]}> 
-    
-    {/* so this thing gives our state and its corresponding function to the context */}
-
+    <TodoContext.Provider value={[state, dispatch]}>
+      {/* so this thing gives our state and its corresponding function to the context */}
 
       {props.children}
-
-
     </TodoContext.Provider>
   );
 };
-
-
-
-// i guess we made a context file by using the useReducer Hooks
-//so here the reducer hook is extensively used with combination to useContext Hook
-
-
-
 
