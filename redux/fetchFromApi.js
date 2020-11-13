@@ -2,7 +2,8 @@
 
 const redux = require("redux");
 const axios = require("axios");
-const thunkMiddleware = require("redux-thunk").default; //redux-thunk is a middleware
+const thunkMiddleware = require("redux-thunk").default; 
+//redux-thunk is a middleware
 const applyMiddleware = redux.applyMiddleware;
 
 const createStore = redux.createStore;
