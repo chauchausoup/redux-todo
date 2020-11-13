@@ -2,7 +2,7 @@
 
 const redux = require("redux");
 const axios = require("axios");
-const thunkMiddleware = require("redux-thunk").default;
+const thunkMiddleware = require("redux-thunk").default; //redux-thunk is a middleware
 const applyMiddleware = redux.applyMiddleware;
 
 const createStore = redux.createStore;
@@ -84,6 +84,7 @@ const fetchUsers = () => {
       });
   };
 };
+
 const store = createStore(reducer, applyMiddleware(thunkMiddleware));
 store.subscribe(() => {
   console.log(store.getState());
