@@ -1,20 +1,16 @@
-import React from 'react'
-import {Provider} from 'react-redux';
-import {createStore} from 'redux';
-import rootReducer from "./reducers";
-import Todo from "./components/Todo";
+import React from "react";
+import { Provider } from "react-redux";
+import store from "./redux/store";
+import CakeContainer from "./components/cakeContainer";
 
-const store = createStore(rootReducer)
-
-function App(){
-    return(
-        <div className="App">
-            <Provider store={store}>
-                <Todo/>
-            </Provider>
-        </div>
-    )
+function App() {
+  return (
+    <Provider store={store}>
+      <div className="App">
+        <CakeContainer />
+      </div>
+    </Provider> 
+  );
 }
 
 export default App;
-
